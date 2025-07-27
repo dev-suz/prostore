@@ -1,12 +1,17 @@
-import { Button } from "@/components/ui/button";
+import ProductList from "@/components/shared/product/product-list";
+import { getLatestProducts } from "@/lib/actions/product.actions";
 
-const Homepage = () => {
+const Homepage = async () => {
+  const latestProducts = await getLatestProducts();
   return (
-    <div>
-    <Button>
-      Button
-    </Button>
-    </div>
+    <>
+      {/* <p>{JSON.stringify(sampleData)}</p> */}
+      <ProductList
+        data={latestProducts}
+        title="Newest Arrivals"
+        limit={4}
+      ></ProductList>
+    </>
   );
 };
 
