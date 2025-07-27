@@ -1,0 +1,8 @@
+{
+  "editor.snippets.codeActions.enabled": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "editor.tabCompletion": "onlySnippets"
+}
